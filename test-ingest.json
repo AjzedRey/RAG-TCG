@@ -1,0 +1,9 @@
+{
+  "type": "video",
+  "source_id": "test-123",
+  "to_embedding": {
+    "Title": "Test Video",
+    "Description": "This is a test video description"
+  },
+  "metadata": {}
+}
