@@ -70,6 +70,21 @@ Content-Type: application/json
 | `Adaptations` | string | 1.1 | Adaptation suggestions |
 | `LearningQuestions` | string | 1.1 | Reflection questions |
 
+#### metadata Object
+
+The metadata object supports both predefined fields and custom fields:
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `creator` | string | No | Content creator name |
+| `category` | string | No | Content category |
+| `timestamp` | string | No | ISO timestamp of content creation |
+| `VideosAndTime` | string | No | Video segments with timestamps |
+| `Totaltime` | string | No | Total duration of content |
+| `Content` | array of strings | No | List of content topics/items |
+
+**Note**: The `Content` field is now an array of strings instead of a single string, allowing you to store multiple content items or topics as a list.
+
 #### Example Request
 
 ```json
@@ -88,7 +103,18 @@ Content-Type: application/json
     "LearningQuestions": "What did you notice about your passing?"
   },
   "metadata": {
-    "Content": "Football",
+    "creator": "Coach Mike Johnson",
+    "category": "basketball",
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "VideosAndTime": "main_video:15:30",
+    "Totaltime": "15:30",
+    "Content": [
+      "Proper shooting stance and footwork",
+      "Hand placement and ball grip",
+      "Follow-through technique",
+      "Common shooting mistakes to avoid",
+      "Practice drills for consistency"
+    ],
     "Category": "Passing",
     "Countries": ["NZ"],
     "SkillZone": "Intermediate",
