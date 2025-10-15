@@ -22,7 +22,14 @@ const ingestSchema = z.object({
     Adaptations: z.string().optional(),
     LearningQuestions: z.string().optional(),
   }),
-  metadata: z.record(z.any()),
+  metadata: z.object({
+    creator: z.string().optional(),
+    category: z.string().optional(),
+    timestamp: z.string().optional(),
+    VideosAndTime: z.string().optional(),
+    Totaltime: z.string().optional(),
+    Content: z.array(z.string()).optional(), // Changed from string to array of strings
+  }).and(z.record(z.any())), // Allow additional fields
   title: z.string().optional(),
   description: z.string().optional(),
 });

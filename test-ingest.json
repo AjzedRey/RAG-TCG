@@ -5,5 +5,17 @@
     "Title": "Test Video",
     "Description": "This is a test video description"
   },
-  "metadata": {}
+  "metadata": {
+    "creator": "John Doe",
+    "category": "sports",
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "VideosAndTime": "video1:5:30,video2:3:45",
+    "Totaltime": "9:15",
+    "Content": [
+      "Introduction to basketball fundamentals",
+      "Shooting technique basics",
+      "Defensive positioning",
+      "Practice drills and exercises"
+    ]
+  }
 }
