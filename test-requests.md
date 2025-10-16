@@ -29,17 +29,11 @@ curl -X POST http://localhost:3000/ingest \
     },
     "metadata": {
       "creator": "Coach Mike Johnson",
-      "category": "basketball",
+      "category": ["basketball", "shooting", "fundamentals", "technique"],
       "timestamp": "2024-01-15T10:30:00.000Z",
       "VideosAndTime": "main_video:15:30",
       "Totaltime": "15:30",
-      "Content": [
-        "Proper shooting stance and footwork",
-        "Hand placement and ball grip",
-        "Follow-through technique",
-        "Common shooting mistakes to avoid",
-        "Practice drills for consistency"
-      ],
+      "Content": "Proper shooting stance and footwork, hand placement and ball grip, follow-through technique, common shooting mistakes to avoid, practice drills for consistency",
       "duration": "15:30",
       "difficulty": "intermediate",
       "sport": "basketball",
@@ -64,7 +58,7 @@ curl -X POST http://localhost:3000/ingest \
     ],
     "body": {
       "mode": "raw",
-      "raw": "{\n  \"type\": \"video\",\n  \"source_id\": \"video_001\",\n  \"version\": 1,\n  \"title\": \"Advanced Basketball Shooting Techniques\",\n  \"description\": \"Learn professional shooting mechanics and form\",\n  \"to_embedding\": {\n    \"Title\": \"Advanced Basketball Shooting Techniques\",\n    \"Transcription\": \"Welcome to this comprehensive guide on basketball shooting. Today we'll cover the fundamentals of proper shooting form, including hand placement, foot positioning, and follow-through. The key to consistent shooting is developing muscle memory through repetition. Start with your feet shoulder-width apart, knees slightly bent, and your shooting hand positioned under the ball. Your guide hand should be on the side for stability. As you prepare to shoot, focus on a smooth upward motion, extending your arm fully and snapping your wrist at the release point. Remember to follow through with your shooting hand pointing toward the basket.\",\n    \"Description\": \"Learn professional shooting mechanics and form\",\n    \"Purpose\": \"To teach players the fundamental shooting techniques used by professional basketball players\",\n    \"Setup\": \"Position yourself 10-15 feet from the basket with a basketball. Ensure you have enough space to practice without obstacles.\",\n    \"CoachingPoints\": \"1. Keep your elbow in line with the basket. 2. Use your legs to generate power, not just your arms. 3. Follow through with your shooting hand pointing at the target. 4. Maintain consistent form on every shot. 5. Practice from different distances to build confidence.\",\n    \"Adaptations\": \"For beginners: Start closer to the basket and focus on form over distance. For advanced players: Add movement and game-like scenarios. For players with physical limitations: Adjust shooting angle and use appropriate ball size.\",\n    \"LearningQuestions\": \"What is the most important aspect of shooting form? How can you ensure consistent follow-through? What role do your legs play in shooting accuracy?\"\n  },\n  \"metadata\": {\n    \"creator\": \"Coach Mike Johnson\",\n    \"category\": \"basketball\",\n    \"timestamp\": \"2024-01-15T10:30:00.000Z\",\n    \"VideosAndTime\": \"main_video:15:30\",\n    \"Totaltime\": \"15:30\",\n    \"Content\": [\n      \"Proper shooting stance and footwork\",\n      \"Hand placement and ball grip\",\n      \"Follow-through technique\",\n      \"Common shooting mistakes to avoid\",\n      \"Practice drills for consistency\"\n    ],\n    \"duration\": \"15:30\",\n    \"difficulty\": \"intermediate\",\n    \"sport\": \"basketball\",\n    \"age_group\": \"12-18\",\n    \"equipment\": [\"basketball\", \"basket\"],\n    \"tags\": [\"shooting\", \"fundamentals\", \"technique\"]\n  }\n}"
+      "raw": "{\n  \"type\": \"video\",\n  \"source_id\": \"video_001\",\n  \"version\": 1,\n  \"title\": \"Advanced Basketball Shooting Techniques\",\n  \"description\": \"Learn professional shooting mechanics and form\",\n  \"to_embedding\": {\n    \"Title\": \"Advanced Basketball Shooting Techniques\",\n    \"Transcription\": \"Welcome to this comprehensive guide on basketball shooting. Today we'll cover the fundamentals of proper shooting form, including hand placement, foot positioning, and follow-through. The key to consistent shooting is developing muscle memory through repetition. Start with your feet shoulder-width apart, knees slightly bent, and your shooting hand positioned under the ball. Your guide hand should be on the side for stability. As you prepare to shoot, focus on a smooth upward motion, extending your arm fully and snapping your wrist at the release point. Remember to follow through with your shooting hand pointing toward the basket.\",\n    \"Description\": \"Learn professional shooting mechanics and form\",\n    \"Purpose\": \"To teach players the fundamental shooting techniques used by professional basketball players\",\n    \"Setup\": \"Position yourself 10-15 feet from the basket with a basketball. Ensure you have enough space to practice without obstacles.\",\n    \"CoachingPoints\": \"1. Keep your elbow in line with the basket. 2. Use your legs to generate power, not just your arms. 3. Follow through with your shooting hand pointing at the target. 4. Maintain consistent form on every shot. 5. Practice from different distances to build confidence.\",\n    \"Adaptations\": \"For beginners: Start closer to the basket and focus on form over distance. For advanced players: Add movement and game-like scenarios. For players with physical limitations: Adjust shooting angle and use appropriate ball size.\",\n    \"LearningQuestions\": \"What is the most important aspect of shooting form? How can you ensure consistent follow-through? What role do your legs play in shooting accuracy?\"\n  },\n  \"metadata\": {\n    \"creator\": \"Coach Mike Johnson\",\n    \"category\": [\"basketball\", \"shooting\", \"fundamentals\", \"technique\"],\n    \"timestamp\": \"2024-01-15T10:30:00.000Z\",\n    \"VideosAndTime\": \"main_video:15:30\",\n    \"Totaltime\": \"15:30\",\n    \"Content\": \"Proper shooting stance and footwork, hand placement and ball grip, follow-through technique, common shooting mistakes to avoid, practice drills for consistency\",\n    \"duration\": \"15:30\",\n    \"difficulty\": \"intermediate\",\n    \"sport\": \"basketball\",\n    \"age_group\": \"12-18\",\n    \"equipment\": [\"basketball\", \"basket\"],\n    \"tags\": [\"shooting\", \"fundamentals\", \"technique\"]\n  }\n}"
     },
     "url": {
       "raw": "http://localhost:3000/ingest",
@@ -102,16 +96,11 @@ curl -X POST http://localhost:3000/ingest \
     },
     "metadata": {
       "creator": "Training Director Sarah",
-      "category": "training_program",
+      "category": ["training_program", "basketball", "development", "structured"],
       "timestamp": "2024-01-15T10:30:00.000Z",
       "VideosAndTime": "intro_video:2:30,week1:8:45,week2:7:20",
       "Totaltime": "18:35",
-      "Content": [
-        "Week 1-2: Basic ball handling fundamentals",
-        "Week 3-4: Shooting form and technique",
-        "Week 5-6: Defensive positioning and footwork",
-        "Week 7-8: Game situation drills and conditioning"
-      ],
+      "Content": "Week 1-2: Basic ball handling fundamentals, Week 3-4: Shooting form and technique, Week 5-6: Defensive positioning and footwork, Week 7-8: Game situation drills and conditioning",
       "duration": "8 weeks",
       "sessions_per_week": 3,
       "session_duration": "60-90 minutes",
@@ -176,17 +165,11 @@ curl -X POST http://localhost:3000/ingest \
     },
     "metadata": {
       "creator": "Coach Sarah Johnson",
-      "category": "coach_profile",
+      "category": ["coach_profile", "basketball", "professional", "development"],
       "timestamp": "2024-01-15T10:30:00.000Z",
       "VideosAndTime": "intro:1:30,techniques:12:45,testimonials:3:20",
       "Totaltime": "17:35",
-      "Content": [
-        "15 years of professional coaching experience",
-        "Specialized in shooting mechanics and form",
-        "Mental game development and performance psychology",
-        "Youth development and skill progression",
-        "Video analysis and performance tracking"
-      ],
+      "Content": "15 years of professional coaching experience, specialized in shooting mechanics and form, mental game development and performance psychology, youth development and skill progression, video analysis and performance tracking",
       "experience_years": 15,
       "specialties": ["shooting", "defense", "mental game", "youth development"],
       "certifications": ["USA Basketball", "NCCP Level 3"],
