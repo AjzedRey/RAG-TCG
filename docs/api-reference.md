@@ -77,13 +77,13 @@ The metadata object supports both predefined fields and custom fields:
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `creator` | string | No | Content creator name |
-| `category` | string | No | Content category |
+| `category` | array of strings | No | List of content categories/tags |
 | `timestamp` | string | No | ISO timestamp of content creation |
 | `VideosAndTime` | string | No | Video segments with timestamps |
 | `Totaltime` | string | No | Total duration of content |
-| `Content` | array of strings | No | List of content topics/items |
+| `Content` | string | No | Content description or summary |
 
-**Note**: The `Content` field is now an array of strings instead of a single string, allowing you to store multiple content items or topics as a list.
+**Note**: The `category` field is now an array of strings instead of a single string, allowing you to store multiple categories or tags as a list.
 
 #### Example Request
 
@@ -104,17 +104,11 @@ The metadata object supports both predefined fields and custom fields:
   },
   "metadata": {
     "creator": "Coach Mike Johnson",
-    "category": "basketball",
+    "category": ["basketball", "shooting", "fundamentals", "technique"],
     "timestamp": "2024-01-15T10:30:00.000Z",
     "VideosAndTime": "main_video:15:30",
     "Totaltime": "15:30",
-    "Content": [
-      "Proper shooting stance and footwork",
-      "Hand placement and ball grip",
-      "Follow-through technique",
-      "Common shooting mistakes to avoid",
-      "Practice drills for consistency"
-    ],
+    "Content": "Proper shooting stance and footwork, hand placement and ball grip, follow-through technique, common shooting mistakes to avoid, practice drills for consistency",
     "Category": "Passing",
     "Countries": ["NZ"],
     "SkillZone": "Intermediate",

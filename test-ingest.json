@@ -7,15 +7,10 @@
   },
   "metadata": {
     "creator": "John Doe",
-    "category": "sports",
+    "category": ["sports", "basketball", "fundamentals"],
     "timestamp": "2024-01-15T10:30:00.000Z",
     "VideosAndTime": "video1:5:30,video2:3:45",
     "Totaltime": "9:15",
-    "Content": [
-      "Introduction to basketball fundamentals",
-      "Shooting technique basics",
-      "Defensive positioning",
-      "Practice drills and exercises"
-    ]
+    "Content": "Introduction to basketball fundamentals, shooting technique basics, defensive positioning, practice drills and exercises"
   }
 }

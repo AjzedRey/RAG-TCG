@@ -24,11 +24,11 @@ const ingestSchema = z.object({
   }),
   metadata: z.object({
     creator: z.string().optional(),
-    category: z.string().optional(),
+    category: z.array(z.string()).optional(), // Changed from string to array of strings
     timestamp: z.string().optional(),
     VideosAndTime: z.string().optional(),
     Totaltime: z.string().optional(),
-    Content: z.array(z.string()).optional(), // Changed from string to array of strings
+    Content: z.string().optional(), // Changed back to string
   }).and(z.record(z.any())), // Allow additional fields
   title: z.string().optional(),
   description: z.string().optional(),
