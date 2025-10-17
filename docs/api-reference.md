@@ -72,18 +72,21 @@ Content-Type: application/json
 
 #### metadata Object
 
-The metadata object supports both predefined fields and custom fields:
+The metadata object supports both predefined fields and custom fields. The category field name depends on the content type:
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `creator` | string | No | Content creator name |
-| `category` | array of strings | No | List of content categories/tags |
+| `Category` | string | No | Single category (for `video` and `coach_info` types) |
+| `Categories` | array of strings | No | Multiple categories (for `plan` type) |
 | `timestamp` | string | No | ISO timestamp of content creation |
 | `VideosAndTime` | string | No | Video segments with timestamps |
 | `Totaltime` | string | No | Total duration of content |
 | `Content` | string | No | Content description or summary |
 
-**Note**: The `category` field is now an array of strings instead of a single string, allowing you to store multiple categories or tags as a list.
+**Note**: 
+- For `video` and `coach_info` types: Use `Category` (singular, string)
+- For `plan` type: Use `Categories` (plural, array of strings)
 
 #### Example Request
 
@@ -104,7 +107,7 @@ The metadata object supports both predefined fields and custom fields:
   },
   "metadata": {
     "creator": "Coach Mike Johnson",
-    "category": ["basketball", "shooting", "fundamentals", "technique"],
+    "Category": "basketball",
     "timestamp": "2024-01-15T10:30:00.000Z",
     "VideosAndTime": "main_video:15:30",
     "Totaltime": "15:30",

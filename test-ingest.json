@@ -7,7 +7,7 @@
   },
   "metadata": {
     "creator": "John Doe",
-    "category": ["sports", "basketball", "fundamentals"],
+    "Category": "basketball",
     "timestamp": "2024-01-15T10:30:00.000Z",
     "VideosAndTime": "video1:5:30,video2:3:45",
     "Totaltime": "9:15",
