@@ -36,6 +36,20 @@ const ingestSchema = z.object({
   description: z.string().optional(),
 });
 
+// BBCode stripping function
+const stripBBCode = (text: string): string => {
+  if (!text) return text;
+  
+  // Remove all BBCode tags - simpler approach that handles all cases
+  // This regex matches any content between [ and ] that contains letters
+  let cleaned = text.replace(/\[[^\]]*[a-zA-Z][^\]]*\]/g, '');
+  
+  // Clean up extra whitespace and normalize line breaks, but preserve single spaces
+  cleaned = cleaned.replace(/\s+/g, ' ').trim();
+  
+  return cleaned;
+};
+
 // PII stripping function
 const stripPII = (text: string): string => {
   if (!text) return text;
@@ -47,6 +61,14 @@ const stripPII = (text: string): string => {
   cleaned = cleaned.replace(/\b(?:\+?1[-.\s]?)?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}\b/g, '[PHONE]');
   
   return cleaned;
+};
+
+// Combined text cleaning function
+const cleanText = (text: string): string => {
+  if (!text) return text;
+  
+  // First strip BBCode, then strip PII
+  return stripPII(stripBBCode(text));
 };
 
 router.post('/', async (req: Request, res: Response): Promise<void> => {
@@ -116,7 +138,7 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
       for (const [field, value] of Object.entries(body.to_embedding)) {
         if (!value || typeof value !== 'string' || value.trim().length === 0) continue;
         
-        const cleanedValue = stripPII(value);
+        const cleanedValue = cleanText(value);
         const chunks = chunkText(field, cleanedValue);
         chunksByField[field] = chunks;
         
